@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Revive Console"
+description = "A responsive recovery operations console for connecting to an existing Revive backend without fabricating customer, payment, recovery, or ROI data."
+version = "1.0.0"
+id = "artifacts/revive-console"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20831
+
+[services.development]
+run = "pnpm --filter @workspace/revive-console run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/revive-console", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/revive-console/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20831"
+BASE_PATH = "/"

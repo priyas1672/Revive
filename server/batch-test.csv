@@ -1,0 +1,6 @@
+customerName,customerEmail,customerPhone,amount,currency,failureCode,failureReason,retryCount
+Rahul,rahul@example.com,9999999999,1500,INR,GATEWAY_TIMEOUT,Gateway timeout during payment processing,0
+Priya,priya@example.com,8888888888,2500,INR,INSUFFICIENT_FUNDS,Insufficient balance in customer account,0
+Aman,aman@example.com,7777777777,1200,INR,UNKNOWN_ERROR,Unknown payment failure,0
+Neha,neha@example.com,9999912345,3000,INR,GATEWAY_ERROR,Temporary gateway error,0
+Rohit,rohit@example.com,9999923456,5000,INR,INSUFFICIENT_FUNDS,Insufficient account balance,0
